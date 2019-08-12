@@ -10,30 +10,30 @@ public class Train {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private int route_id;
-    private int platform_id;
+    private long id;
+    private int number;
+    private String grade;
     private double dep_date;
     private double arrive_date;
 
-    public Train(int id, int route_id, int platform_id, double dep_date, double arrive_date) {
+    public Train(long id, int number, String grade, double dep_date, double arrive_date) {
         this.id = id;
-        this.route_id = route_id;
-        this.platform_id = platform_id;
+        this.number = number;
+        this.grade = grade;
         this.dep_date = dep_date;
         this.arrive_date = arrive_date;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public int getRoute_id() {
-        return route_id;
+    public int getNumber() {
+        return number;
     }
 
-    public int getPlatform_id() {
-        return platform_id;
+    public String getGrade() {
+        return grade;
     }
 
     public double getDep_date() {
@@ -43,5 +43,4 @@ public class Train {
     public double getArrive_date() {
         return arrive_date;
     }
-
 }

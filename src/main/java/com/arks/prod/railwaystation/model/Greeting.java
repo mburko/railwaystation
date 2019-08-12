@@ -1,7 +1,6 @@
 package com.arks.prod.railwaystation.model;
 
 public class Greeting {
-
     private long id;
     private String content;
 
@@ -17,5 +16,4 @@ public class Greeting {
     public String getContent() {
         return content;
     }
-
 }

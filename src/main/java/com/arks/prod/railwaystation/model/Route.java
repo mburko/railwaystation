@@ -7,22 +7,23 @@ import javax.persistence.Id;
 
 @Entity
 public class Route {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
     private String start_point;
     private String destination;
-    private int train_id;
+    private long train_id;
+    private int distance;
 
-    public Route(int id, String start_point, String destination, int train_id) {
+    public Route(long id, String start_point, String destination, long train_id, int distance) {
         this.id = id;
         this.start_point = start_point;
         this.destination = destination;
         this.train_id = train_id;
+        this.distance = distance;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -34,8 +35,11 @@ public class Route {
         return destination;
     }
 
-    public int getTrain_id() {
+    public long getTrain_id() {
         return train_id;
     }
 
+    public int getDistance() {
+        return distance;
+    }
 }

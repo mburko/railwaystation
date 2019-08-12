@@ -7,18 +7,19 @@ import javax.persistence.Id;
 
 @Entity
 public class Platform {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
     private String name;
+    private long train_id;
 
-    public Platform(int id, String name) {
+    public Platform(long id, String name, long train_id) {
         this.id = id;
         this.name = name;
+        this.train_id = train_id;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -26,4 +27,7 @@ public class Platform {
         return name;
     }
 
+    public long getTrain_id() {
+        return train_id;
+    }
 }
